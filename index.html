@@ -3,33 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnyWaste</title>
-    <meta name="description" content="AnyWaste is a cloud-based waste management platform that simplifies waste collections, recycling, compliance, and reporting—helping businesses streamline operations and go fully digital.">
-    <!-- ------- Grid ------- -->
+    <title>AnyWaste | Digital Waste Management Simplified</title>
+    <meta name="description" content="AnyWaste is a cloud-based waste management platform that simplifies digital compliance, collection tracking, customer registration, and reporting for waste producers, recyclers, carriers, and brokers.">
+    <meta name="theme-color" content="#3B6D11">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css">
-    <!-- ------- Styles ------- -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- ------- Header ------- -->
-    <header>
+<body id="top">
+    <span class="custom-cursor" aria-hidden="true">
+        <span class="custom-cursor__dot"></span>
+        <span class="custom-cursor__label">Explore</span>
+    </span>
 
+    <header class="site-header">
+        <p class="announcement-bar" id="announcement-bar">
+            <span class="announcement-bar__content">
+                <img src="images/recycle_icon_container.svg" alt="" width="22" height="22">
+                <span>Our Vision, Mission and Values. Digital waste compliance made effortless.</span>
+                <a href="#vision">Read More</a>
+                <img src="images/recycle_icon_container.svg" alt="" width="22" height="22">
+            </span>
+            <button class="announcement-bar__close" type="button" aria-label="Close announcement" data-cursor="Close announcement">×</button>
+        </p>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a class="brand" href="#top" aria-label="AnyWaste home" data-cursor="Go to home">
+                <img src="images/logo.webp" alt="AnyWaste" width="168" height="42">
+            </a>
+
+            <ul class="nav-list">
+                <li><a href="#home" data-cursor="Go to home">Home</a></li>
+                <li class="has-menu">
+                    <button class="nav-menu-button" type="button" aria-expanded="false" aria-controls="about-menu" data-cursor="Open About Us">
+                        About Us
+                    </button>
+                    <ul class="dropdown-menu" id="about-menu" role="menu">
+                        <li role="none"><a href="#vision" role="menuitem" data-cursor="Go to Our Vision">Our Vision</a></li>
+                        <li role="none"><a href="#team" role="menuitem" data-cursor="Go to Team">Team</a></li>
+                        <li role="none"><a href="#impact" role="menuitem" data-cursor="Go to Global Impact">Global Impact</a></li>
+                    </ul>
+                </li>
+                <li><a href="#services" data-cursor="Go to Waste Services">Waste Services</a></li>
+                <li><a href="#how-it-works" data-cursor="Go to How It Works">How It Works</a></li>
+                <li class="has-menu">
+                    <button class="nav-menu-button" type="button" aria-expanded="false" aria-controls="customer-menu" data-cursor="Open Customer Types">
+                        Customer Types
+                    </button>
+                    <ul class="dropdown-menu" id="customer-menu" role="menu">
+                        <li role="none"><a href="#waste-producers" role="menuitem" data-cursor="Go to Waste Producers">Waste Producers</a></li>
+                        <li role="none"><a href="#recyclers" role="menuitem" data-cursor="Go to Recyclers">Recyclers</a></li>
+                        <li role="none"><a href="#carriers" role="menuitem" data-cursor="Go to Carriers">Carriers</a></li>
+                        <li role="none"><a href="#waste-brokers" role="menuitem" data-cursor="Go to Waste Brokers">Waste Brokers</a></li>
+                    </ul>
+                </li>
+                <li><a href="#news" data-cursor="Go to News">News</a></li>
+                <li><a href="#contact" data-cursor="Go to Contact">Contact Us</a></li>
+            </ul>
+
+            <ul class="nav-actions">
+                <li><a class="login-link" href="#contact" data-cursor="Go to Login">Login</a></li>
+                <li><a class="button button--solid" href="#contact" data-cursor="Get Started">Get Started</a></li>
+            </ul>
+        </nav>
     </header>
-    <!-- ------- Navigation Bar ------- -->
-    <nav>
-        <ul>
 
-        </ul>
-    </nav>
-    <!-- ------- Main Content ------- -->
+    <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-cursor="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Open navigation menu</span>
+    </button>
+
+    <button class="mobile-menu-backdrop" type="button" aria-label="Close mobile navigation" hidden></button>
+
+    <aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+        <span class="mobile-menu__handle" aria-hidden="true"></span>
+        <nav aria-label="Mobile primary navigation">
+            <ul>
+                <li><a href="#home" data-cursor="Go to home">Home</a></li>
+                <li>
+                    <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobile-about-menu" data-cursor="Open About Us">
+                        About Us
+                    </button>
+                    <ul class="mobile-submenu" id="mobile-about-menu">
+                        <li><a href="#vision" data-cursor="Go to Our Vision">Our Vision</a></li>
+                        <li><a href="#team" data-cursor="Go to Team">Team</a></li>
+                        <li><a href="#impact" data-cursor="Go to Global Impact">Global Impact</a></li>
+                    </ul>
+                </li>
+                <li><a href="#services" data-cursor="Go to Waste Services">Waste Services</a></li>
+                <li><a href="#how-it-works" data-cursor="Go to How It Works">How It Works</a></li>
+                <li>
+                    <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobile-customer-menu" data-cursor="Open Customer Types">
+                        Customer Types
+                    </button>
+                    <ul class="mobile-submenu" id="mobile-customer-menu">
+                        <li><a href="#waste-producers" data-cursor="Go to Waste Producers">Waste Producers</a></li>
+                        <li><a href="#recyclers" data-cursor="Go to Recyclers">Recyclers</a></li>
+                        <li><a href="#carriers" data-cursor="Go to Carriers">Carriers</a></li>
+                        <li><a href="#waste-brokers" data-cursor="Go to Waste Brokers">Waste Brokers</a></li>
+                    </ul>
+                </li>
+                <li><a href="#news" data-cursor="Go to News">News</a></li>
+                <li><a href="#contact" data-cursor="Go to Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
     <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <img class="hero__image" src="images/hero_banner.webp" alt="AnyWaste waste management platform illustration showing digital compliance, routing and collections.">
+            <header class="hero__masthead" aria-label="AnyWaste banner heading">
+                <p class="hero__masthead-title">ANYWASTE</p>
+                <p class="hero__masthead-subtitle">Digital Waste Management. Simplified.</p>
+            </header>
+            <article class="hero__content">
+                <p class="hero__eyebrow">Smarter operations for a cleaner system</p>
+                <h1 id="hero-title">Smarter Waste <span class="hero__highlight">Management</span></h1>
+                <p class="hero__lead">AnyWaste makes waste collections and recycling digital, helping teams create compliance paperwork in seconds, track live jobs, and onboard customers without friction.</p>
+                <ul class="hero__points">
+                    <li>Create digital compliance in seconds</li>
+                    <li>Manage all collections in real time</li>
+                    <li>Register customers and send quotes online</li>
+                </ul>
+                <p class="hero__actions">
+                    <a class="button button--solid" href="#contact" data-cursor="Get Started">Get Started</a>
+                    <a class="button button--ghost" href="#how-it-works" data-cursor="See how it works">How It Works</a>
+                </p>
+            </article>
+        </section>
 
+        <section class="intro" id="vision" aria-labelledby="vision-title">
+            <p class="section-label">Our Vision</p>
+            <h2 id="vision-title">A digital-first platform for waste compliance, collections and growth.</h2>
+            <p>Built for operational clarity, AnyWaste helps teams move away from paperwork-heavy processes and into one connected workflow for drivers, recyclers, brokers and producers.</p>
+        </section>
+
+        <section class="feature-grid" id="services" aria-labelledby="services-title">
+            <h2 id="services-title">Waste services that reduce friction from first quote to final report.</h2>
+            <article>
+                <h3>Digital duty of care</h3>
+                <p>Generate regulatory documents quickly, reduce paperwork and keep compliance records accessible.</p>
+            </article>
+            <article>
+                <h3>Collection planning</h3>
+                <p>Set up, amend and track collections through one clear operational view for your team.</p>
+            </article>
+            <article>
+                <h3>Customer registration</h3>
+                <p>Onboard customers faster, issue quotes online and reduce admin across the sales journey.</p>
+            </article>
+        </section>
+
+        <section class="steps" id="how-it-works" aria-labelledby="how-title">
+            <p class="section-label">How It Works</p>
+            <h2 id="how-title">One workflow for booking, moving and reporting waste services.</h2>
+            <ol>
+                <li>
+                    <strong>Register and quote.</strong>
+                    Add customer details, create services and issue quotes digitally.
+                </li>
+                <li>
+                    <strong>Schedule and manage.</strong>
+                    Allocate drivers, adjust jobs and keep collections visible in real time.
+                </li>
+                <li>
+                    <strong>Report and improve.</strong>
+                    Produce digital compliance records and review performance with less admin.
+                </li>
+            </ol>
+        </section>
+
+        <section class="customer-types" aria-labelledby="customers-title">
+            <p class="section-label">Customer Types</p>
+            <h2 id="customers-title">Designed for every part of the waste chain.</h2>
+            <article id="waste-producers">
+                <h3>Waste Producers</h3>
+                <p>Organise collections quickly through a clear system that removes manual admin.</p>
+            </article>
+            <article id="recyclers">
+                <h3>Recyclers</h3>
+                <p>Manage recycling activity with better visibility, lower paperwork and cleaner reporting.</p>
+            </article>
+            <article id="carriers">
+                <h3>Carriers</h3>
+                <p>Control collections, drivers and route changes from one live operational workflow.</p>
+            </article>
+            <article id="waste-brokers">
+                <h3>Waste Brokers</h3>
+                <p>Coordinate multiple carriers and recyclers from one dashboard without losing oversight.</p>
+            </article>
+        </section>
+
+        <section class="about-panels" id="team" aria-labelledby="team-title">
+            <article>
+                <p class="section-label">Team</p>
+                <h2 id="team-title">A platform shaped around operational users, not just software features.</h2>
+                <p>Every interface is designed to make day-to-day waste management faster to learn, easier to run and simpler to scale across teams.</p>
+            </article>
+            <article id="impact">
+                <p class="section-label">Global Impact</p>
+                <h2>Reducing paperwork, delays and hidden operational costs across the waste industry.</h2>
+                <p>Digital workflows help organisations respond faster, improve traceability and unlock cleaner reporting throughout their service chain.</p>
+            </article>
+        </section>
+
+        <section class="news" id="news" aria-labelledby="news-title">
+            <p class="section-label">News</p>
+            <h2 id="news-title">What teams usually want to know first.</h2>
+            <ul>
+                <li>Can AnyWaste help create digital duty of care paperwork? Yes, that is one of its core uses.</li>
+                <li>Is it suitable for carriers, recyclers and brokers? Yes, the platform is structured for each of those workflows.</li>
+                <li>Can teams manage collections in real time? Yes, jobs can be set up, updated and tracked digitally.</li>
+            </ul>
+        </section>
+
+        <section class="contact-cta" id="contact" aria-labelledby="contact-title">
+            <p class="section-label">Contact</p>
+            <h2 id="contact-title">Start building a clearer, faster waste workflow.</h2>
+            <p>Use the assistant to ask quick questions, or get in touch to discuss producers, recyclers, carriers or brokers.</p>
+            <p class="contact-cta__actions">
+                <a class="button button--solid" href="mailto:hello@anywaste.com" data-cursor="Email AnyWaste">Email AnyWaste</a>
+                <a class="button button--ghost" href="tel:+442038552018" data-cursor="Call AnyWaste">Call +44 0203 855 2018</a>
+            </p>
+        </section>
     </main>
-    <!-- ------- Footer ------- -->
-    <footer>
 
-    </footer>
-    <!-- ------- Scripts ------- -->
+    <!-- ── Chatbot launcher ── -->
+    <button class="chatbot-launcher" type="button" aria-expanded="false" aria-controls="site-chatbot" data-cursor="Open chatbot">
+        <span class="chatbot__logo-wrap chatbot__logo-wrap--launcher">
+            <img src="images/chatbot_logo.webp" alt="" width="20" height="20">
+        </span>
+        <span>
+            <strong>Ask AnyWaste</strong>
+            <span>Assistant online</span>
+        </span>
+        <span class="chatbot__active-dot" aria-hidden="true"></span>
+    </button>
+
+    <!-- ── Chatbot panel ── -->
+    <aside class="chatbot" id="site-chatbot" aria-labelledby="chatbot-title" aria-hidden="true">
+
+        <!-- Header -->
+        <header class="chatbot__header">
+            <p class="chatbot__identity">
+                <span class="chatbot__logo-wrap">
+                    <img src="images/chatbot_logo.webp" alt="" width="22" height="22">
+                </span>
+                <span>
+                    <strong id="chatbot-title">Ask AnyWaste</strong>
+                    <span class="chatbot__status">AI Assistant · Online</span>
+                </span>
+            </p>
+            <p class="chatbot__header-actions">
+                <span class="chatbot__active-dot" aria-hidden="true"></span>
+                <button class="chatbot__header-btn chatbot__expand" type="button" aria-label="Expand chat" data-cursor="Expand chat">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                </button>
+                <button class="chatbot__header-btn chatbot__minimise" type="button" aria-label="Minimise chat" data-cursor="Minimise chat">
+                    <svg width="12" height="2" viewBox="0 0 12 2" fill="currentColor" aria-hidden="true"><rect width="12" height="2" rx="1"/></svg>
+                </button>
+                <button class="chatbot__close" type="button" aria-label="Close chatbot" data-cursor="Close chatbot">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </p>
+        </header>
+
+        <!-- Messages -->
+        <div class="chatbot__body">
+            <ul class="chatbot__messages" aria-live="polite" aria-label="Chatbot messages">
+                <li class="chatbot__message chatbot__message--bot">Hi! 👋 How can I help you today? Ask me about collections, compliance, or anything AnyWaste related.</li>
+            </ul>
+        </div>
+
+        <!-- Suggestions -->
+        <ul class="chatbot__suggestions" aria-label="Suggested prompts">
+            <li><button type="button" data-prompt="anywaste platform system" data-cursor="What does AnyWaste do?">What does AnyWaste do?</button></li>
+            <li><button type="button" data-prompt="who customer type sector" data-cursor="Who is it for?">Who is it for?</button></li>
+            <li><button type="button" data-prompt="duty of care compliance regulatory documentation" data-cursor="Duty of Care & compliance">Duty of Care & compliance</button></li>
+            <li><button type="button" data-prompt="collection track driver booking" data-cursor="Collections & tracking">Collections & tracking</button></li>
+        </ul>
+
+            <div class="chatbot__support-wrap">
+                <button class="chatbot__support-btn" type="button" data-cursor="Contact support">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.6 2 2 0 0 1 3.62 1.4h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+                    Contact Support or Sales Team
+                </button>
+            </div>
+
+        <!-- Input form -->
+        <form class="chatbot__form" aria-label="Ask the chatbot">
+            <label class="sr-only" for="chatbot-input">Ask AnyWaste a question</label>
+            <input id="chatbot-input" name="message" type="text" placeholder="Ask about collections, compliance…" autocomplete="off">
+            <button type="submit" data-cursor="Send message">Send</button>
+        </form>
+
+        <!-- End-chat confirmation overlay -->
+        <div class="chatbot__end-modal" role="dialog" aria-modal="true" aria-labelledby="end-chat-title">
+            <h3 id="end-chat-title">End Chat?</h3>
+            <p>Are you sure you want to end this chat? The conversation will be cleared.</p>
+            <button class="chatbot__end-confirm" type="button">End Chat</button>
+            <button class="chatbot__end-cancel" type="button">Cancel</button>
+        </div>
+
+    </aside>
+
+    <!-- ── Scroll to top ── -->
+    <button class="scroll-top" type="button" aria-label="Scroll to top" data-cursor="Scroll to top">
+        <span class="scroll-top__inner">
+            <span class="scroll-top__arrow">↑</span>
+            <span class="scroll-top__text">Scroll to top</span>
+        </span>
+    </button>
+
     <script src="js/main.js"></script>
 </body>
 </html>
